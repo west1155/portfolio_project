@@ -1,11 +1,8 @@
-import './App.css';
 
 import {Header} from "./layouts/header/Header";
-import {Footer} from "./layouts/footer/Footer";
 import styled from "styled-components";
+import {theme} from "./components/Theme";
 import {AboutMe} from "./layouts/sections/about/AboutMe";
-import {Post} from "./layouts/sections/posts/Post";
-import {Work} from "./layouts/sections/works/Work";
 
 
 function App() {
@@ -13,10 +10,7 @@ function App() {
         <div className="App">
             <PageContainer>
                 <Header/>
-                <AboutMe/>
-                <Post/>
-                <Work/>
-                <Footer/>
+                <AboutMe />
             </PageContainer>
         </div>
     );
@@ -24,9 +18,17 @@ function App() {
 
 
 const PageContainer = styled.div`
+  max-width: 1152px;
+  max-height: 2041px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
+  
+  @media ${theme.media.mobile} {
+    max-width: 375px;
+    max-height: 667px;
+  }
 `
 
 export default App;

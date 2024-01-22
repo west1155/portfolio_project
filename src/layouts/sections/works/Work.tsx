@@ -1,14 +1,21 @@
 import React from 'react';
 import styled from "styled-components";
+import futwork1 from '../../../assets/work1.png'
+import futwork2 from '../../../assets/work2.png'
+import futwork3 from '../../../assets/work3.png'
+
+
+interface WorkPicturePropsType {
+    id: string;
+}
 
 export const Work = () => {
     return (
-        <>
             <Featured>
                 <H2>Featured works</H2>
                 <WorksContainer>
                     <WorkItem>
-                        <WorkPicture/>
+                        <WorkPicture src={futwork1} alt={''}/>
                         <Describtion>
                         <DescribtionTitle>Designing Dashboards</DescribtionTitle>
                         <DescribtionTime>
@@ -22,36 +29,60 @@ export const Work = () => {
                         </Describtion>
 
                     </WorkItem>
+
+                    <WorkItem>
+                        <WorkPicture src={futwork2} alt={''}/>
+                        <Describtion>
+                            <DescribtionTitle>Designing Dashboards</DescribtionTitle>
+                            <DescribtionTime>
+                                <Time>2020</Time>
+                                <Desc_Feature>Dashboard</Desc_Feature>
+                            </DescribtionTime>
+                            <Desc_Text> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
+                                sunt nostrud amet.
+                            </Desc_Text>
+                        </Describtion>
+
+                    </WorkItem>
+                    <WorkItem>
+                        <WorkPicture src={futwork3} alt={''}/>
+                        <Describtion>
+                            <DescribtionTitle>Designing Dashboards</DescribtionTitle>
+                            <DescribtionTime>
+                                <Time>2020</Time>
+                                <Desc_Feature>Dashboard</Desc_Feature>
+                            </DescribtionTime>
+                            <Desc_Text> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
+                                sunt nostrud amet.
+                            </Desc_Text>
+                        </Describtion>
+
+                    </WorkItem>
                 </WorksContainer>
 
 
             </Featured>
-        </>
     )
         ;
 };
 
-
-const H2 = styled.h2`
-  color: var(--Dark-Color, #21243D);
-  font-family: Heebo, serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 60px; /* 272.727% */
+const Featured = styled.section`
+  max-width: 860px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: white;
 `
 
-
-const Featured = styled.div`
-  background: aquamarine;
-  width: 1152px;
-  height: 2041px;
+const H2 = styled.h2 `
+  font-size: 22px;
+  line-height: 28px;
+  color: #21243d;
+  margin-bottom: 20px;
 `
 
 const WorksContainer = styled.div`
-  padding: 0;
-  margin: 0;
-  border: 0;
   font-family: Heebo, sans-serif;
   line-height: 1;
   font-size: 14px;
@@ -64,13 +95,12 @@ const WorkItem = styled.div`
   border-bottom: 1px solid #e0e0e0;
 `
 
-const WorkPicture = styled.picture`
+const WorkPicture = styled.img`
   width: 246px;
   height: 180px;
   margin-right: 18px;
   flex-shrink: 0;
   border-radius: 6px;
-  background: url(../../../assets/work1.png), lightgray 50% / cover no-repeat;
 `
 
 
