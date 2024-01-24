@@ -9,8 +9,8 @@ interface FlexWrapperPropsType {
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   display: flex;
-  direction: ${props => props.direction || "row"};
-  justify-content: ${props => props.justify || "flex-start"};
-  align-items: ${props => props.align || "stretch"};
+  flex-direction: ${props => props.direction || 'column'};
+  justify-content: ${props => props.justify || ''};
+  align-items: ${props => props.align || 'center'};
   flex-wrap: ${props => props.wrap || "nowrap"};
 `

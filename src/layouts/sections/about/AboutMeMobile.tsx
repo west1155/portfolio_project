@@ -9,13 +9,14 @@ export const AboutMeMobile = () => {
             <H1>
                 <div>Hi, I'm John,</div>
                 <div>Creative</div>
-                <div>Technologist</div>
+                <div>Developer</div>
             </H1>
             <P>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                 Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.</P>
+                Exercitation veniam consequat sunt nostrud amet.
+            </P>
+            <Button>Download CV</Button>
 
-            <Button>Download Resume</Button>
 
         </StyledMain>
     );
@@ -25,13 +26,9 @@ export const AboutMeMobile = () => {
 const Photo = styled.img`
   width: 170.85px;
   height: 170.85px;
-  margin-top: 33px;
   flex-shrink: 0;
   border-radius: 243px;
   background: url(../../../assets/proj1.png), lightgray 50% / cover no-repeat;
-
-
-
 `
 
 
@@ -43,10 +40,10 @@ const H1 = styled.h1`
   border: 2px solid blue;
   text-align: center;
 `
+
 const Button = styled.button`
-  margin-top: 38px;
+  margin-top: 27px;
   margin-bottom: 58px;
-  
   width: 208px;
   height: 47px;
   
@@ -86,10 +83,10 @@ const StyledMain = styled.section`
   @media ${theme.media.mobile} {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    padding-top: 33px;
+    justify-content: center;
     align-items: center;
-    border: 3px solid green;
-
+    border: 2px solid red;
   }
 `
 

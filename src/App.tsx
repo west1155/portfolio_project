@@ -3,6 +3,8 @@ import {Header} from "./layouts/header/Header";
 import styled from "styled-components";
 import {theme} from "./components/Theme";
 import {AboutMe} from "./layouts/sections/about/AboutMe";
+import {AboutMeMobile} from "./layouts/sections/about/AboutMeMobile";
+import {Footer} from "./layouts/footer/Footer";
 
 
 function App() {
@@ -10,7 +12,8 @@ function App() {
         <div className="App">
             <PageContainer>
                 <Header/>
-                <AboutMe />
+                <AboutMe/>
+                <Footer/>
             </PageContainer>
         </div>
     );
@@ -26,8 +29,11 @@ const PageContainer = styled.div`
   
   
   @media ${theme.media.mobile} {
-    max-width: 375px;
-    max-height: 667px;
+    min-width: 375px;
+    min-height: 576px;
+    width: 100%;
+    height: 100%;
+    
   }
 `
 
