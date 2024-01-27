@@ -69,7 +69,7 @@ export const WorkDesktop = () => {
 };
 
 const Featured = styled.section`
-  max-width: 860px;
+  max-width: 960px;
   padding-top: 40px;
   padding-bottom: 20px;
   background-color: white;

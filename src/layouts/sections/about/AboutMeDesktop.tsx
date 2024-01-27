@@ -83,7 +83,7 @@ const Promo_Column = styled.div`
 
 const Container = styled.div`
   background-color: #ffffff;
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
 `
 

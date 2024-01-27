@@ -21,12 +21,13 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer `
   padding: 130px 0 50px;
-  text-align: center
+  text-align: center;
+  border: 2px solid red;
 `
 
 
 const Container = styled.div `
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
   & svg {
     margin-right: 35px;

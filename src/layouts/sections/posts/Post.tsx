@@ -6,7 +6,6 @@ export const Post = () => {
     return (
         <>
             <PostDesktop/>
-            <PostMobile/>
         </>
 
     );

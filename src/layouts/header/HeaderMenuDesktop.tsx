@@ -23,6 +23,8 @@ export const HeaderMenuDesktop = (props: { menuItems: Array<string> }) => {
 
 
 const StyledHeader = styled.header`
+  display: flex;
+  justify-content: right;
   background-color: ${theme.colors.background_colour};
   border: 2px solid black;
 
@@ -57,9 +59,19 @@ const NavLink = styled.a<NavProps>`
   margin-right: 33px;
   width: ${props => props.width || 'auto'};
   height: ${props => props.height || 'auto'};
+  transition: all .3s ease 0s;
 
   &:hover {
     text-decoration: underline;
+    color: #ff6464;
+  }
+  
+  &:visited {
+    text-decoration: none;
+  }
+  
+  &:active {
+    color: #ff6464;
   }
 `;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const PostDesktop = () => {
     return (
@@ -9,31 +10,37 @@ export const PostDesktop = () => {
                     <Featured_posts>Recent posts</Featured_posts>
                     <VIEW_ALL href={''}>View all</VIEW_ALL>
                 </Posts_Top>
+                <FlexWrapper>
+                <ARTICLE>
+                    <h2>Making a design system from scratch</h2>
+                    <ul>
+                        <LI1>12 Feb 2020</LI1>
+                        <LI2>Design, Pattern</LI2>
+                    </ul>
+
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                        Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+
+                </ARTICLE>
+                <ARTICLE>
+                    <h2>Creating pixel perfect icons in Figma</h2>
+                    <ul>
+                        <LI1>12 Feb 2020</LI1>
+                        <LI2>Design, Pattern</LI2>
+                    </ul>
+
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                        Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+
+                </ARTICLE>
+                </FlexWrapper>
 
 
-                <POST_ITEMS>
-                    <ARTICLE>
-                        <h2>Making a design system from scratch</h2>
-                        <ul>
-                            <li>
-                                <time>12 Feb 2020</time>
-                            </li>
-                            <li>
-                                Design, Pattern
-                            </li>
-                        </ul>
-                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat
-                            duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                    </ARTICLE>
-                    <ARTICLE>
-                        <h2>Making a design system from scratch</h2>
-                        <span>12 Feb 2020</span>
-                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat
-                            duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                    </ARTICLE>
-                </POST_ITEMS>
+
 
 
             </Container>
@@ -62,33 +69,26 @@ const ARTICLE = styled.article`
   background-color: #fff;
   margin-right: 10px;
 
-  + h2 {
+  > h2 {
     font-weight: 700;
     font-size: 26px;
     line-height: 38px;
     color: #21243d;
   }
-  
-  + ul {
+
+  > ul {
     font-size: 18px;
     line-height: 26px;
-    color: #21243d;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-top: 20px;
     list-style: none;
-    +li {
-      padding-right: 25px;
-      border-right: 1px solid #000;
-    }
+
   }
 
-  + p {
+  > p {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 24px;
     color: #21243d;
-    display: flex;
     margin-top: 20px;
   }
 `
@@ -111,13 +111,34 @@ const VIEW_ALL = styled.a`
   }
 `
 
+const LI1 = styled.li `
+  font-size: 18px;
+  line-height: 26px;
+  color: #21243d;
+  padding-right: 25px;
+  border-right: 1px solid #000;
+`
+const LI2 = styled.li `
+  font-size: 18px;
+  line-height: 26px;
+  color: #21243d;
+  border: 0;
+  padding-left: 25px;
+  padding-right: 0;
+`
 
 const Section = styled.section`
   background: #EDF7FA;
   padding: 20px 0 30px;
+  @media (max-width: 1400px) {
+    min-width: 1400px;
+  }
+  @media (max-width: 1600px) {
+    min-width: 1540px;
+  }
 `
 
 const Container = styled.div`
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
 `

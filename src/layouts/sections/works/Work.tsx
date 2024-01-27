@@ -6,7 +6,6 @@ export const Work = () => {
     return (
         <>
             <WorkDesktop/>
-            <WorkMobile/>
         </>
     );
 };

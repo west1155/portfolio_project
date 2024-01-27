@@ -1,10 +1,1 @@
-<H1>
-                <div>Hi, I'm John,</div>
-                <div>Creative</div>
-                <div>Technologist</div>
-            </H1>
-            <P>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.</P>
-
-            <Button>Download Resume</Button>
+calc((100vw - 360px)/(1360 - 360) * (18 - 12) + 12)
