@@ -12,7 +12,7 @@ export const Footer = () => {
                 <GlobalSvgSelector id={'linkedIn_logo'}/>
             </Container>
             <Copyright>
-                Copyright ©2020 All rights reserved
+                Only Copyleft {new Date().getFullYear()} All rights reserved
             </Copyright>
         </StyledFooter>
     );
@@ -22,7 +22,6 @@ export const Footer = () => {
 const StyledFooter = styled.footer `
   padding: 130px 0 50px;
   text-align: center;
-  border: 2px solid red;
 `
 
 

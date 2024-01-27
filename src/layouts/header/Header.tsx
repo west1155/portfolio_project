@@ -3,7 +3,7 @@ import {HeaderMenuDesktop} from "./HeaderMenuDesktop";
 import {HeaderMenuMobile} from "./HeaderMenuMobile";
 
 
-const menuItems: Array<string> = ['Works', 'Blog', 'Contacts']
+const menuItems: Array<string> = ['Works', 'Contacts']
 
 
 export const Header = () => {

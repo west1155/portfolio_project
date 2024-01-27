@@ -1,15 +1,25 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../components/Theme";
+import Typewriter from 'typewriter-effect';
 
 export const AboutMeDesktop = () => {
+
     return (
         <StyledMain>
 
             <Container>
                 <Promo_Row>
                     <Promo_Column>
-                        <H1>Hi, I am John, <div>Creative Technologist</div></H1>
+
+                        <H1>Yo, I'm Alex
+                        <Typewriter
+                            options={{
+                                strings: ['Creative', 'Web developer'],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        /></H1>
 
                         <StyleText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                             consequat

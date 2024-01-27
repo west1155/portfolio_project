@@ -102,8 +102,6 @@ const VIEW_ALL = styled.a`
   font-size: 16px;
   line-height: 23px;
   color: #00a8cc;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 
   &:hover {
@@ -128,6 +126,7 @@ const LI2 = styled.li `
 `
 
 const Section = styled.section`
+  min-width: 100%;
   background: #EDF7FA;
   padding: 20px 0 30px;
   @media (max-width: 1400px) {

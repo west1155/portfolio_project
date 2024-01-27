@@ -6,12 +6,15 @@ import {AboutMeMobile} from "./layouts/sections/about/AboutMeMobile";
 import {Footer} from "./layouts/footer/Footer";
 import {Post} from "./layouts/sections/posts/Post";
 import {Work} from "./layouts/sections/works/Work";
-import {PostMobile} from "./layouts/sections/posts/PostMobile";
+import {Particles_Mode} from "./components/particles/Particles";
+
+
 
 
 function App() {
     return (
         <div className="App">
+            <Particles_Mode />
             <Header/>
             <PageContainer>
                 <AboutMe/>
@@ -39,7 +42,5 @@ const PageContainer = styled.div`
     height: 100%;
 
   }`
-
-/*dopisat media zaprosi s 1200px 1400px 1600px*/
 
 export default App;

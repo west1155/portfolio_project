@@ -26,8 +26,6 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: right;
   background-color: ${theme.colors.background_colour};
-  border: 2px solid black;
-
 
   @media ${theme.media.mobile} {
     display: none;
