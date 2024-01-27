@@ -49,10 +49,10 @@ export const Particles_Mode = () => {
                 },
                 particles: {
                     color: {
-                        value: "#dadada",
+                        value: "#7a7777",
                     },
                     links: {
-                        color: "#dadada",
+                        color: "#b0aeae",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,
@@ -82,7 +82,7 @@ export const Particles_Mode = () => {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 0.2, max: 1 },
                     },
 
                 },

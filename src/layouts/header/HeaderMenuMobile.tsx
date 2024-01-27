@@ -60,9 +60,5 @@ const BurgerMenuPopUp = styled.div<{ isOpen: boolean }>`
     align-items: center;
     justify-content: center;
   `}
-  
-  
-  
-  
 `
 

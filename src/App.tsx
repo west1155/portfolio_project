@@ -2,16 +2,16 @@ import {Header} from "./layouts/header/Header";
 import styled from "styled-components";
 import {theme} from "./components/Theme";
 import {AboutMe} from "./layouts/sections/about/AboutMe";
-import {AboutMeMobile} from "./layouts/sections/about/AboutMeMobile";
 import {Footer} from "./layouts/footer/Footer";
 import {Post} from "./layouts/sections/posts/Post";
 import {Work} from "./layouts/sections/works/Work";
 import {Particles_Mode} from "./components/particles/Particles";
+import React from "react";
+import {BrowserRouter, Route} from "react-router-dom";
+import {ContactForm} from "./layouts/contacts/ContactForm";
 
 
-
-
-function App() {
+const App: React.FC = () =>  {
     return (
         <div className="App">
             <Particles_Mode />
@@ -19,7 +19,6 @@ function App() {
             <PageContainer>
                 <AboutMe/>
                 <Post />
-                <Work />
             </PageContainer>
             <Footer/>
         </div>

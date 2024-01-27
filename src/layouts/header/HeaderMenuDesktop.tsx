@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import {theme} from "../../components/Theme";
+import {ContactForm} from "../contacts/ContactForm";
 
 
 interface NavProps {
@@ -9,12 +10,31 @@ interface NavProps {
 }
 
 export const HeaderMenuDesktop = (props: { menuItems: Array<string> }) => {
+
+
+
+    const [isClicked, setIsClicked] = useState(false)
+
+
+    const handleSubmit = () => {
+        setIsClicked(true)
+    }
+
     return (
         <StyledHeader>
             <Nav>
                 <Nav_menu>
-                    {props.menuItems.map((item: string) => (
-                        <NavLink href={''} width={'71px'} height={'43px'}>{item}</NavLink>))}
+                    {
+                        props.menuItems.map((item: string) => (
+                            <NavLink
+                                href={''}
+                                width={'71px'}
+                                height={'43px'}
+                                onClick={item === 'Contacts' ? handleSubmit : undefined}
+                            >{item}
+                            </NavLink>)
+                        )
+                    }
                 </Nav_menu>
             </Nav>
         </StyledHeader>
@@ -63,11 +83,11 @@ const NavLink = styled.a<NavProps>`
     text-decoration: underline;
     color: #ff6464;
   }
-  
+
   &:visited {
     text-decoration: none;
   }
-  
+
   &:active {
     color: #ff6464;
   }
