@@ -1,36 +1,24 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 import {theme} from "../../components/Theme";
-import {ContactForm} from "../contacts/ContactForm";
 
-
-interface NavProps {
-    width: string,
-    height: string,
+interface HeaderMenuDesktopPropsType {
+    menuItems: string[],
+    openContactModal: () => void
 }
 
-export const HeaderMenuDesktop = (props: { menuItems: Array<string> }) => {
-
-
-
-    const [isClicked, setIsClicked] = useState(false)
-
-
-    const handleSubmit = () => {
-        setIsClicked(true)
-    }
+export const HeaderMenuDesktop: React.FC<HeaderMenuDesktopPropsType> = ({menuItems, openContactModal}) => {
 
     return (
         <StyledHeader>
             <Nav>
                 <Nav_menu>
                     {
-                        props.menuItems.map((item: string) => (
+                        menuItems.map((item, index) => (
                             <NavLink
-                                href={''}
-                                width={'71px'}
-                                height={'43px'}
-                                onClick={item === 'Contacts' ? handleSubmit : undefined}
+                                href={""}
+                                key={index}
+                                onClick={openContactModal}
                             >{item}
                             </NavLink>)
                         )
@@ -65,8 +53,10 @@ const Nav_menu = styled.nav`
 `
 
 
-const NavLink = styled.a<NavProps>`
+const NavLink = styled.a`
   color: black;
+  height: 73px;
+  width: 47px;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
@@ -75,8 +65,6 @@ const NavLink = styled.a<NavProps>`
   letter-spacing: 0;
   text-align: right;
   margin-right: 33px;
-  width: ${props => props.width || 'auto'};
-  height: ${props => props.height || 'auto'};
   transition: all .3s ease 0s;
 
   &:hover {

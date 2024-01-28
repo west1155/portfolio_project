@@ -1,17 +1,18 @@
 import React, {useState} from 'react';
 import {HeaderMenuDesktop} from "./HeaderMenuDesktop";
-import {HeaderMenuMobile} from "./HeaderMenuMobile";
 import styled from "styled-components";
 
+const menuItems: string[] = ['Works', 'Contacts']
 
-const menuItems: Array<string> = ['Works', 'Contacts']
+export interface HeaderPropsType {
+    openContactModal: () => void
+}
 
-export const Header = () => {
+export const Header:React.FC<HeaderPropsType> = ({openContactModal}) => {
 
     return (
         <Section>
-            <HeaderMenuDesktop menuItems={menuItems}/>
-            <HeaderMenuMobile menuItems={menuItems}/>
+            <HeaderMenuDesktop openContactModal={openContactModal} menuItems={menuItems} />
         </Section>
     );
 };

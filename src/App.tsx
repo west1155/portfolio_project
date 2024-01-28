@@ -4,23 +4,30 @@ import {theme} from "./components/Theme";
 import {AboutMe} from "./layouts/sections/about/AboutMe";
 import {Footer} from "./layouts/footer/Footer";
 import {Post} from "./layouts/sections/posts/Post";
-import {Work} from "./layouts/sections/works/Work";
 import {Particles_Mode} from "./components/particles/Particles";
-import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
-import {ContactForm} from "./layouts/contacts/ContactForm";
+import React, {useState} from "react";
+import {ModalContactBootStrap} from "./layouts/contacts/ModalContactBootStrap";
+import {TestForm} from "./layouts/contacts/TestForm";
 
 
-const App: React.FC = () =>  {
+const App: React.FC = () => {
+
+
+    const [showModal, setShowModal] = useState(false)
+    const handleShow = () => setShowModal(true)
+    const handleClose = () => setShowModal(false)
+
     return (
         <div className="App">
-            <Particles_Mode />
-            <Header/>
+            <Header openContactModal={handleShow}/>
+            <Particles_Mode/>
             <PageContainer>
                 <AboutMe/>
-                <Post />
+                <button onClick={handleShow}>Show Modal Dialog</button>
+                <Post/>
             </PageContainer>
             <Footer/>
+            <TestForm isOpen={showModal} closeModal={handleClose}></TestForm>
         </div>
     );
 }
